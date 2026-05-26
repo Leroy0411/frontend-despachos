@@ -4,7 +4,7 @@ import FormDespacho from './CrudAdmin/FormDespacho'
 import Modal from './CrudAdmin/Modal'
 import SearchBar from './CrudAdmin/SearchBar'
 
-const API_URL = 'http://54.162.212.95:8081/api/despachos'
+const API_URL = 'http://100.31.209.170:8081/api/despachos'
 
 export default function CrudAdmin() {
   const [despachos, setDespachos] = useState([])
