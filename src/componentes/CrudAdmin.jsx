@@ -57,13 +57,18 @@ export default function CrudAdmin() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-blue-50 p-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">Gestión de Despachos</h1>
+
+        {/* Header */}
+        <div className="bg-blue-700 rounded-xl shadow p-5 mb-6 flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold text-white">Gestión de Despachos</h1>
+            <p className="text-blue-200 text-sm mt-1">Innovatech Chile — v1.1</p>
+          </div>
           <button
             onClick={() => { setSelected(null); setShowModal(true) }}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-white text-blue-700 font-semibold px-5 py-2 rounded-lg hover:bg-blue-100 transition"
           >
             + Nuevo Despacho
           </button>
@@ -90,6 +95,7 @@ export default function CrudAdmin() {
             />
           </Modal>
         )}
+
       </div>
     </div>
   )
