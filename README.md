@@ -78,6 +78,7 @@ push → deploy
 - **SPA routing en Nginx**: `try_files $uri $uri/ /index.html` permite que React Router maneje todas las rutas
 
 
+
 ---
 *ISY1101 — Introducción a Herramientas DevOps | DuocUC 2025*
 
