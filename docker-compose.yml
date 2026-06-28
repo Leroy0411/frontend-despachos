@@ -1,0 +1,23 @@
+version: "3.9"
+
+networks:
+  red-publica:
+    driver: bridge
+
+services:
+  frontend-despacho:
+    image: ${DOCKERHUB_USERNAME:-lerotype04}/frontend-despacho:latest
+    container_name: frontend-despacho
+    restart: unless-stopped
+    networks:
+      - red-publica
+    ports:
+      - "80:80"
+    environment:
+      BACKEND_URL: http://${EC2_HOST_BACKEND}:8081
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:80 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
